@@ -3,26 +3,8 @@ describe('Closures and Scope - ', function () {
   const notPresentItem = 9;
   const presentItem = 4;
 
-  var createPopAttributes;
-  beforeEach(function () {
-    createPopAttributes = {
-      title: document.createElement('h3'),
-      currIndex: -1000000,
-      check: false,
-    };
-  });
-
   it('Define a function: createPop()', function () {
     expect(typeof createPop).toBe('function');
-  });
-
-  it("Initialize the attributes with values as -> currIndex:-1000000, title:document.createElement('h3'), check:false", function () {
-    expect(createPopAttributes).toEqual(
-      jasmine.objectContaining({
-        currIndex: -1000000,
-        check: false,
-      })
-    );
   });
 
   it('Return `The item is not present and is at index -1000000`, when item is not present in the given array', function () {
